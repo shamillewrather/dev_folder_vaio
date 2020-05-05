@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+} 
+body {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*Green color + buttons*/
+header > nav > button:last-child, main section div.col-wrapper header.col-title button{
+    /* background-color: rgb(40, 167, 69); */
+    background-color: #B92E52;
+}
+
+/*Gray color background on elements*/
+body > header, header > nav > button, main section div.col-wrapper ul li{
+    /* background-color: #6C757D; */
+    background-color: #31363E;
+}
+
+/* This hides the element while still having visibility in SEO, whereas display:none renders the element completely invisible */
+h1{
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+/*end of hiding element*/
+
+body > header {
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    position: static;
+    top: 0;
+}
+header .top {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .top div{
+    display: flex;
+    /* height: 100%; */
+    /* align-items: flex-start; */
+    /* vertical-align: super; */
+    font-size: 2em;
+    font-weight: 500;
+    /* line-height: 2em; */
+}
+
+header .top div span{
+    /* vertical-align: top; */
+    display: inline-block;
+    line-height: 15px;
+}
+
+header .top div .caps{
+    display: inline-block;
+    text-transform: capitalize;
+    height: 25px;
+}
+
+header > nav {
+    background-color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header > nav > button{
+    /* border: 8px solid #6C757D; */
+    border: 8px solid #31363E;
+    border-radius: .25rem;
+    padding: 6px 12px;
+    /* color: #fff; */
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 5px;
+}
+header > nav > button:hover{
+    background-color: #fff;
+    border-color: #E0A800;
+    color: #212529;
+}
+header > nav > button:last-child{
+    /* border-color: #28a745; */
+    border-color: #B92E52;
+}
+
+main{
+    /* display:flex; */
+    /* justify-content: center; */
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    margin: 4rem 1rem;
+}
+
+main section{
+    /* width: 25%; */
+    /* float: left; */
+    /* display: flex; */
+    /* grid-template-columns: 1fr; */
+    /* grid-gap: 1rem; */
+    /* width: 75vw; */
+}
+
+main section .col-wrapper{
+    /* margin: 0 1rem; */
+    /* width: 100%; */
+}
+main section .col-wrapper header{
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    font-size: 1.2em;
+    /* color: #000; */
+}
+
+main section .col-wrapper header.col-title h2{
+    color: #000;
+}
+
+main section div.col-wrapper header.col-title button{
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    margin: 0 20px 0 0;
+}
+
+main section div.col-wrapper ul{
+    /* margin: 25px 0; */
+    list-style: none;
+}
+
+main section div.col-wrapper ul li{
+    display: block;
+    min-height: 40px;
+    padding: 20px;
+    margin: 1rem 0;
+}
+
+main section div.col-wrapper ul li article h3 {
+    font-size: 1.5rem;
+}
+
+main section div.col-wrapper ul li article h3:before, main section div.col-wrapper ul li article h3:after {
+    content: "";
+    display: block;
+    background-image: url("../images/arrow.png");
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+main section div.col-wrapper ul li article h3:before{
+    float: left;
+    transform: scale(-1);
+}
+
+main section div.col-wrapper ul li article h3:after{
+    float: right;
+}
+
+main section div.col-wrapper ul li button{
+    /* background-color: #ffc107; */
+    background-color:#E4C6B8;
+    color: #000;
+    text-transform: capitalize;
+    border: none;
+    padding: 10px;
+    /* text-align: center; */
+}
+
+/*media query to be able to swipe columns left to right and vice versa on a small screen - meaning the columns need to stay one next to the other in width*/
+
+@media screen and (max-width: 768px){
+    main {
+        width: 100vw;
+        min-width: 100vw;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        margin: 4em 0;
+    }
+
+    main section {
+        /*each section takes up exactly 95% of the window of my phone so that I can swipe from one to another*/
+        width: 100vw;
+      
+    }
+}

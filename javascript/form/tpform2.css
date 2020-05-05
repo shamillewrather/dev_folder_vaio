@@ -1,0 +1,33 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d8569;
+    color: #fff;
+}
+
+form {
+    width: 10%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+label, input{
+    display: block;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+input {
+    line-height: 1rem;
+}
+
+input.button {
+    background-color: #7d190a;
+    border-style: none;
+    border-radius: 0.25rem;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+}

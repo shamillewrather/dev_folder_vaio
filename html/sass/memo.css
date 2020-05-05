@@ -1,0 +1,190 @@
+/*DEFINE VARIABLES */
+/*Old colors*/
+/*New colors*/
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff; }
+
+/* This hides the h1 element while still having visibility in SEO, whereas display:none renders the element completely invisible */
+h1 {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px; }
+
+body {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; }
+  body > header {
+    /* background-color: $memo-gray; */
+    background-color: #31363e;
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    position: static;
+    top: 0; }
+    body > header div.top {
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      body > header div.top div {
+        display: flex;
+        /* height: 100%; */
+        /* align-items: flex-start; */
+        /* vertical-align: super; */
+        font-size: 2.5rem;
+        font-weight: 500;
+        /* line-height: 2em; */
+        margin: 0 3.5rem 0 0; }
+        body > header div.top div .caps {
+          display: inline-block;
+          text-transform: capitalize;
+          height: 25px;
+          position: relative;
+          top: 6px; }
+      body > header div.top span {
+        /* vertical-align: top; */
+        display: inline-block;
+        line-height: 15px; }
+    body > header > nav {
+      background-color: #fff;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body > header > nav button {
+        /* background-color: $memo-gray; */
+        background-color: #31363e;
+        /* border: 8px solid $memo-gray; */
+        border: 8px solid #31363e;
+        border-radius: 0.25rem;
+        padding: 6px 12px;
+        /* color: $memo-white; */
+        font-size: 1em;
+        line-height: 1.5;
+        margin: 5px; }
+        body > header > nav button:last-child {
+          /* background-color: $memo-green; */
+          background-color: #b92e52;
+          /* border-color: $memo-green; */
+          border-color: #b92e52; }
+        body > header > nav button:hover {
+          background-color: #fff;
+          border-color: #e4c6b8;
+          color: #212529;
+          cursor: pointer; }
+
+main {
+  /* display:flex; */
+  /* justify-content: center; */
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  margin: 4rem 1rem;
+  /*media query to be able to swipe columns left to right and vice versa on a small screen - meaning the columns need to stay one next to the other in width*/ }
+  main section {
+    /* width: 25%; */
+    /* float: left; */
+    /* display: flex; */
+    /* grid-template-columns: 1fr; */
+    /* grid-gap: 1rem; */
+    /* width: 75vw; */ }
+    main section .col-wrapper {
+      /* margin: 0 1rem; */
+      /* width: 100%; */ }
+      main section .col-wrapper ul {
+        /* margin: 25px 0; */
+        list-style: none; }
+        main section .col-wrapper ul li {
+          /* background-color: $memo-gray; */
+          background-color: #31363e;
+          display: block;
+          min-height: 40px;
+          padding: 20px;
+          margin: 1rem 0;
+          border-radius: 0.25rem; }
+          main section .col-wrapper ul li article h3 {
+            font-size: 1.5rem;
+            position: relative;
+            padding: 0 2.5rem; }
+            main section .col-wrapper ul li article h3:before, main section .col-wrapper ul li article h3:after {
+              content: "";
+              display: block;
+              background-image: url("../images/arrow.png");
+              background-size: 1.5rem;
+              background-repeat: no-repeat;
+              width: 1.5rem;
+              height: 1.5rem;
+              position: absolute;
+              top: 0; }
+            main section .col-wrapper ul li article h3:before {
+              /*float: left;*/
+              transform: scale(-1);
+              margin: 0 0.75px 0 0;
+              left: 0; }
+            main section .col-wrapper ul li article h3:after {
+              /*float: right;*/
+              margin: 0 0 0 0.75px;
+              right: 0; }
+          main section .col-wrapper ul li article button {
+            /* background-color: $memo-yellow; */
+            background-color: #e4c6b8;
+            color: #000;
+            text-transform: capitalize;
+            border: none;
+            border-radius: 0.25rem;
+            padding: 10px;
+            /* text-align: center; */
+            display: block;
+            margin: 2rem auto 1rem;
+            font-size: 1rem;
+            position: relative; }
+            main section .col-wrapper ul li article button:hover {
+              cursor: pointer; }
+            main section .col-wrapper ul li article button:after {
+              width: 0%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              content: '';
+              position: absolute;
+              z-index: -1;
+              transition: all 0.3s; }
+              main section .col-wrapper ul li article button:after:hover {
+                width: 100%;
+                background-color: #b92e52; }
+    main section header.col-title {
+      display: flex;
+      align-items: center;
+      /* justify-content: flex-start; */
+      font-size: 1.2em;
+      /* color: #000; */ }
+      main section header.col-title h2 {
+        color: #212529; }
+      main section header.col-title button {
+        /* background-color: $memo-green; */
+        background-color: #b92e52;
+        border: none;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        margin: 0 20px 0 0; }
+        main section header.col-title button:hover {
+          cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    main {
+      width: 100vw;
+      min-width: 100vw;
+      overflow-x: auto;
+      overflow-y: hidden;
+      justify-content: flex-start;
+      margin: 4em 0; }
+      main section {
+        /*each section takes up exactly 95% of the window of my phone so that I can swipe from one to another*/
+        width: 100vw; } }
+
+/*# sourceMappingURL=memo.css.map */

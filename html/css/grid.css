@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+  }
+
+/*GRID WITH PHOTOS*/
+
+header{
+    height: 250px;
+    background: transparent url(../images/header.jpg) center center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    /* grid-template-rows: calc(100%/5); */
+    grid-auto-rows: auto;
+}
+
+.container section{
+    /*height: 100px;*/
+    height: 250px;
+}
+
+.container section.red{
+    background: transparent url(../images/red.jpg) center center;
+    grid-column-start: 4;
+    grid-column-end: span 2;
+}
+
+.container section.blue{
+    background: transparent url(../images/blue.jpg) center center;
+    grid-column-start: 6;
+    grid-column-end: span 2;
+}
+
+.container section.pink{
+    background: transparent url(../images/pink.jpg) center center;
+    grid-column-start: 8;
+    grid-column-end: span 2;
+}
+/*INITIAL GRID*/
+
+/*.wrapper {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+   /*  grid-gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.wrapper div{
+    height: 50px;
+}
+
+.wrapper > div.one, div.seven{
+    background-color: #B9F291;
+}
+
+.wrapper > div.two, div.eight{
+    background-color: #84D2B4;
+}
+
+.wrapper > div.three, div.nine{
+    background-color: #5E5959;
+}
+
+.wrapper > div.four, div.ten{
+    background-color: #F72349;
+}
+
+.wrapper > div.five, div.eleven{
+    background-color: #FF845E;
+    /* grid-column: span 3; */
+/*}
+
+.wrapper > div.six, div.twelve{
+    background-color: #F9E6A9;
+}*/

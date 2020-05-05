@@ -1,0 +1,32 @@
+body {
+    box-sizing: border-box;
+}
+
+.container-flex {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-flex div {
+    width: 23%;
+    height: 50px;
+    margin: 1%;
+}
+
+.container-flex div:nth-child(4n+1) {
+    background-color: rgb(76, 106, 206);
+}
+
+.container-flex div:nth-child(4n+2) {
+    background-color: rgb(167, 36, 67);
+}
+
+.container-flex div:nth-child(4n+3) {
+    background-color: rgb(61, 139, 38);
+}
+
+.container-flex div:nth-child(4n+4) {
+    background-color: rgb(228, 182, 55);
+}
